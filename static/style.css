@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Montserrat:wght@100;300&display=swap');/*!
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+html, h1,h2,h3,h3,h5,h6 {
+font-family: 'Montserrat', sans-serif;
+font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4 {
+    -webkit-font-smoothing: antialiased;
+}
+
+.bi {
+    width: 1em;
+    height: 1em;
+    vertical-align: -.125em;
+    fill: currentcolor;
+}
+
+.home {
+	background-image: url("/static/images/bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 9.5em;
+}
+
+.book {
+	width: 18rem;
+	display: inline-block;
+	margin-right: 15px;
+    margin-bottom: 25px !important;
+}
+
+.book .card-title {
+	/* font-family: inherit !important; */
+	font-family: sans-serif;
+    font-size: 17px;
+}
+
+.book .card-title a {
+	text-decoration: none;
+}
+
+#photo {
+	margin: 0 auto;
+    display: block;
+}
+
+.pwrapper {
+	margin-top: 5em;
+}
+
+.pwrapper div {
+	box-shadow: 0px 0px 0px #666;
+}
+
+.mwrapper {
+	padding: 0 !important;
+}
+
+.bwrapper.card {
+	border: 0 !important;
+}
+
+.profile.container {
+	max-width: 1181px !important;
+}
+
+.bookdesc{
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+}
+
+.slick-carousel {
+	height: 100px;
+}
+
+.slick-carousel img {
+	background: #fff;
+    color: #fff;
+    font-size: 36px;
+	height: 100px;
+    line-height: 100px;
+    margin: 10px;
+    padding: 10px;
+	margin-left: 2px;
+    position: relative;
+    text-align: center;
+}
+
+.slick-prev:before, .slick-next:before {
+	color: #0069d9 !important;
+}
+
+.book {
+	--mdb-image-hover-transition: all 0.3s ease-in-out;
+    transition: var(--mdb-image-hover-transition);
+}
+
+.book:hover {
+    opacity: 0.9;
+	box-shadow: 0px 0px 7px -5px #534d4d;
+}
+
+.action-btn-wrapper {
+	position: absolute;
+	right: 0;
+}
+
+.action-btn-wrapper form {
+	display: block !important;
+	overflow: auto;
+    margin-bottom: 5px;
+}
+
+.disabled {
+	/* cursor: not-allowed; */
+}
+
+.share-link {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+    font-size: 20px;
+}

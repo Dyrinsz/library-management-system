@@ -1,0 +1,70 @@
+{%extends "/shared/layout.html" %}
+
+{% block title %}Books{% endblock %}
+
+{% block head %}
+	{{ super() }}
+
+    <link rel="stylesheet" href="/static/home.css" />
+{% endblock %}
+
+{% block content %}
+	<div class="container h-75">	
+		<div style="width:100%; margin-top: 3em;">
+			{% if msg %}
+				<div class="alert alert-success">{{msg}}</div>
+			{% endif %}
+			{% if error %}
+				<div class="alert alert-danger">{{error}}</div>
+			{% endif %}
+			<form action="/books/search" method="GET">
+			  <div class="form-group">
+			    <div style="width: 100%">
+			    <div style="width: 90%; display: inline-block;">
+			    <input type="search" name="keyword" autofocus class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{keyword}}" placeholder="Search for books...">
+			    </div>
+				<button type="submit" style="margin-left: 5px;" class="btn btn-primary">Search</button>
+			    </div>
+			  </div>
+			</form>
+		</div>
+
+		<div style="width:100%; margin-top: 3em;">
+			{% if books %}
+				{% if view=='mybooks' %}
+				<h4 class="mb-3">My Books ({{count}})</h4>
+				{% endif %}
+
+				{% if search %}
+				<h4 class="mb-3">Search found ({{count}})</h4>
+				{% endif %}
+				
+				{% for book in books %}
+				<div class="card book hover-overlay">
+				  <img src="/static/images/bg.jpg" style="cursor: pointer;" onclick="window.location='/books/{{book['id']}}'" class="card-img-top" alt="{{book[1]}}">
+				  <div class="card-body">
+				    <h5 class="card-title"><a href="/books/{{book['id']}}">{{book['name']}}</a></h5>
+				    {% if book['availability'] < 1 %}
+				    	<span class="badge badge-warning" style="margin-bottom: 5px;">Assigned</span>
+				    {% endif %}
+				    <p class="card-text bookdesc">{{book['desc']}}</p>
+
+				    <p class="card-text">
+				    	{% if book['count'] < 1 %}
+							<span class="badge badge-secondary" style="margin-bottom: 5px;">All reserved</span>
+				    	{% endif %}
+					</p>
+
+				    {% if book['count'] > 0 %}
+				    <a href="/books/add/{{book['id']}}" {{ 'disabled' if user_books!=None and str(book['id']) in user_books else '' }} class="btn btn-outline-warning {{ 'disabled' if str(book['id']) in user_books else '' }}"><i class="bi bi-journal-plus"></i> {{ 'Added' if str(book['id']) in user_books else 'Add' }}</a>
+				    {% endif %}
+				  </div>
+				</div>
+				{% endfor %}
+			{% else %}
+				<h4>No Books Found!</h4>
+				<p>Please contact the librarian...</p>
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}
