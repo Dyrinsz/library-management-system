@@ -7,7 +7,7 @@ class DB(object):
 	host = "nozomi.proxy.rlwy.net"
 	user = "root"
 	password = "eFueqEYTZzHZxYenNYfZrLzeGplLnsoW"
-	db = "lms"
+	db = "railway"
 	table = ""
 
 	def __init__(self, app):
