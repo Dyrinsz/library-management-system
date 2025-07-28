@@ -15,7 +15,7 @@ class DB(object):
 		app.config["MYSQL_DATABASE_USER"] = self.user;
 		app.config["MYSQL_DATABASE_PASSWORD"] = self.password;
 		app.config["MYSQL_DATABASE_DB"] = self.db;
-		app.config['MYSQL_DATABASE_HOST'] = 'snozomi.proxy.rlwy.net';
+		app.config['MYSQL_DATABASE_HOST'] = 'nozomi.proxy.rlwy.net';
 		app.config['MYSQL_DATABASE_PORT'] = 47310;
 
 		self.mysql = MySQL(app, cursorclass=DictCursor)
