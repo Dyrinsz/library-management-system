@@ -1,49 +1,82 @@
+/* == Welcome Section Styling == */
 .welcome {
+    /* Menggunakan variabel untuk warna agar mudah diubah dan konsisten */
+    --welcome-heading-color: #2c3e50;
+    --welcome-text-color: #555;
+    --welcome-accent-color: #28a745; /* Warna untuk ikon centang */
+
     text-align: center;
-    padding: 20px;
-    color: #333;
+    padding: 60px 20px; /* Padding vertikal lebih besar untuk ruang napas */
+    color: var(--welcome-text-color);
 }
 
-.welcome h3 {
-    font-size: 2.2rem;
+/* --- Typography --- */
+.welcome h1 {
+    font-size: 3rem; /* Menggunakan rem untuk konsistensi */
+    font-weight: 700;
+    color: var(--welcome-heading-color);
+    margin-bottom: 15px;
+}
+
+/* Mengganti h3 menjadi h2 untuk hierarki yang lebih baik */
+.welcome h2 {
+    font-size: 1.8rem;
     font-weight: 600;
-    margin-bottom: 20px;
-    color: #2c3e50;
+    margin-bottom: 25px;
+    color: var(--welcome-heading-color);
 }
 
 .welcome p {
     font-size: 1.1rem;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 15px;
+    line-height: 1.7;
+    max-width: 720px; /* Batasi lebar paragraf agar mudah dibaca */
+    margin: 0 auto 20px auto; /* Centering paragraf */
 }
 
+/* --- Feature List --- */
 .welcome ul {
+    display: inline-block; /* Agar bisa di-center dan lebarnya sesuai konten */
     text-align: left;
-    margin: 0 auto;
-    padding-left: 20px;
-    font-size: 1rem;
-    color: #444;
+    margin-top: 20px;
+    padding-left: 0;
+    list-style-type: none; /* Hapus bullet point default */
 }
 
 .welcome ul li {
-    margin-bottom: 10px;
-    list-style-type: "✔️ ";
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    position: relative; /* Diperlukan untuk positioning pseudo-element */
+    padding-left: 30px; /* Beri ruang untuk ikon centang kustom */
 }
 
+/* Styling ikon centang yang lebih fleksibel */
+.welcome ul li::before {
+    content: '✔'; /* Karakter centang */
+    color: var(--welcome-accent-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+/* == Responsive Design == */
 @media (max-width: 768px) {
-    .welcome h3 {
-        font-size: 1.8rem;
+    .welcome {
+        padding: 40px 15px;
+    }
+
+    .welcome h1 {
+        font-size: 2.5rem;
+    }
+
+    .welcome h2 {
+        font-size: 1.5rem;
     }
 
     .welcome p,
-    .welcome ul {
+    .welcome ul li {
         font-size: 1rem;
     }
-}
 
-.welcome h1 {
-    font-size: 3.5em;
-    color: #2c3e50;
-    margin-bottom: 20px;
 }
