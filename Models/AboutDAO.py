@@ -1,3 +1,4 @@
-class AboutDAO():
-    self.db = AboutDAO
-    self.db.table = "users"
+class AboutDAO:
+    def __init__(self):
+        self.db = AboutDAO
+        self.db.table = "users"
