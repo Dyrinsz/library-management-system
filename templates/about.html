@@ -1,0 +1,22 @@
+{% extends "/shared/layout.html" %}
+
+{% block title %}About{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="/static/about.css" />
+{% endblock %}
+
+{% block content %}
+<div class="container d-flex h-75">
+    <div class="row justify-content-center align-self-center welcome">
+        <h3>ABOUT THIS SYSTEM</h3>
+        <p style="width:100%; margin-top: 10px;">
+            This Library Management System is a web application built using Flask and MySQL. 
+            It is designed to help administrators manage book collections, user accounts, 
+            and borrowing records efficiently. Members can search for books, view details, 
+            and manage their profile seamlessly through an intuitive interface.
+        </p>
+    </div>
+</div>
+{% endblock %}
