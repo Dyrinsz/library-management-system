@@ -1,0 +1,26 @@
+<!-- Example: c:\MyWork\library-management-system\templates\about.html or templates\user\about.html -->
+{% extends "/shared/layout.html" %}
+
+{% block title %}About{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="/static/about.css" />
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>About the Library Management System</h2>
+    <p>
+        This Library Management System helps users search for books, manage their accounts, and allows administrators to oversee library operations efficiently.
+    </p>
+    <ul>
+        <li>Search and reserve books</li>
+        <li>Manage user profiles</li>
+        <li>Admin dashboard for library staff</li>
+    </ul>
+    <p>
+        For more information, contact us at <a href="mailto:info@library.com">info@library.com</a>.
+    </p>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "/shared/admin_layout.html" %}
+
+{% block title %}About{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="/static/about.css" />
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>About the Library Management System (Admin)</h2>
+    <p>
+        This admin section allows library staff to manage books, users, and oversee all library operations efficiently.
+    </p>
+    <ul>
+        <li>Add, edit, or remove books</li>
+        <li>Manage user accounts and permissions</li>
+        <li>View system analytics and reports</li>
+    </ul>
+    <p>
+        For admin support, contact <a href="mailto:admin@library.com">admin@library.com</a>.
+    </p>
+</div>
+{% endblock %}
