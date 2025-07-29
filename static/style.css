@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Montserrat:wght@100;300&display=swap');
-/*!
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Montserrat:wght@100;300&display=swap');/*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -7,10 +6,11 @@
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
-html, h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+html, h1,h2,h3,h3,h5,h6 {
+font-family: 'Montserrat', sans-serif;
+font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 h1, h2, h3, h4 {
@@ -18,117 +18,52 @@ h1, h2, h3, h4 {
 }
 
 .home {
-    background-image: url("/static/images/bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0 9.5em;
+	background-image: url("/static/images/bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 9.5em;
 }
 
 .book {
-    width: 18rem;
-    display: inline-block;
-    margin-right: 15px;
+	width: 18rem;
+	display: inline-block;
+	margin-right: 15px;
     margin-bottom: 25px !important;
 }
 
 .book .card-title {
-    font-family: inherit !important;
+	font-family: inherit !important;
 }
 
 #photo {
-    margin: 0 auto;
+	margin: 0 auto;
     display: block;
 }
 
 .pwrapper {
-    margin-top: 5em;
+	margin-top: 5em;
 }
 
 .pwrapper div {
-    box-shadow: 0px 0px 0px #666;
+	box-shadow: 0px 0px 0px #666;
 }
 
 .mwrapper {
-    padding: 0 !important;
+	padding: 0 !important;
 }
 
 .bwrapper.card {
-    border: 0 !important;
+	border: 0 !important;
 }
 
 .profile.container {
-    max-width: 1181px !important;
+	max-width: 1181px !important;
 }
 
-.bookdesc {
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-}
-
-.about-container {
-    max-width: 800px;
-    margin: 100px auto;
-    padding: 40px 30px;
-    background-color: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.about-container h2 {
-    font-size: 2.3rem;
-    font-weight: 600;
-    color: #343a40;
-    margin-bottom: 20px;
-}
-
-.about-container p {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-.about-container ul {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 20px;
-    display: inline-block;
-    text-align: left;
-}
-
-.about-container ul li {
-    font-size: 1rem;
-    margin-bottom: 12px;
-    padding-left: 28px;
-    position: relative;
-    line-height: 1.5;
-}
-
-.about-container ul li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: #007bff;
-    font-size: 1.2rem;
-}
-
-@media screen and (max-width: 768px) {
-    .about-container {
-        margin: 60px 20px;
-        padding: 30px 20px;
-    }
-
-    .about-container h2 {
-        font-size: 1.8rem;
-    }
-
-    .about-container p,
-    .about-container ul li {
-        font-size: 1rem;
-    }
+.bookdesc{
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
 }
