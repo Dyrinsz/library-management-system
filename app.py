@@ -13,7 +13,6 @@ DAO = DAO(app)
 from routes.user import user_view
 from routes.book import book_view
 from routes.admin import admin_view
-from routes.admin import about_view
 
 # Registering custom functions to be used within templates
 app.jinja_env.globals.update(
@@ -24,4 +23,3 @@ app.jinja_env.globals.update(
 app.register_blueprint(user_view)
 app.register_blueprint(book_view)
 app.register_blueprint(admin_view)
-app.register_blueprint(about_view)
