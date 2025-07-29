@@ -1,0 +1,44 @@
+.about-container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 30px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.about-container h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+.about-container p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.about-container ul {
+    text-align: left;
+    list-style: none;
+    padding-left: 0;
+    display: inline-block;
+}
+
+.about-container ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    padding-left: 24px;
+    position: relative;
+}
+
+.about-container ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #007bff;
+    font-size: 1.2rem;
+}
